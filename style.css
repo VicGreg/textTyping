@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #1d1e23;
+}
+h1 {
+  font-size: 8rem;
+  color: #fff;
+  font-weight: 600;
+
+}
+h1 span {
+  position: relative;
+  color: #06ff51;
+}
+h1 span::before {
+  content: "";
+  right: -8px;
+  top: 50%;
+  position: absolute;
+  height: 150px;
+  width: 2px;
+  background: #ffffff;
+  transform: translateY(-45%);
+  animation: blink 0.7s infinite;
+}
+
+h1 span.stop-blinking::before {
+  animation: none;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
